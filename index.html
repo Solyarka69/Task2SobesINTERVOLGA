@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <button id="open-modal" class='open-modal' onclick="MakeVisible()">Открыть форму</button>
+
+    <div class="modal-block">
+        <div class="close-button-container">
+            <button class="close-button" onclick="MakeHidden()"></button>
+        </div>
+
+        <div class="modal-content">
+            <form action="#" class="form">
+                <h2>Транспортные средства и водители</h2>
+
+                <div class="row">
+                    <label for="input-gosNumber" class="required">
+                        <span>Гос-номер</span>
+                        <input type="text" id="input-gosNumber" minlength="7" maxlength="9"
+                            placeholder="Укажите го-номер" required>
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label for="input-ts" class="required">
+                        <span>Транспортное средство</span>
+                        <input type="text" id="input-ts" placeholder="Транспортное средство" required>
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label for="input-date">
+                        <span>Ориентировочная дата прибытия к покупателю</span>
+                        <div class="input-notes-container">
+                            <input type="text" id="input-date" placeholder="Дата*" required>
+                            <div class="input-notes-svg-icon">
+                                <img src="./date-logo.svg" width="20" height="20" alt="image format png">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <h3>Данные о водителе</h3>
+
+                <div class="row">
+                    <label for="input-fullName">
+                        <span>ФИО</span>
+                        <input type="text" id="input-fullName" placeholder="Укажите ФИО водителя" required>
+                    </label>
+                </div>
+
+                <div class="row uniq-row">
+                    <label for="input-passport">
+                        <span>Паспортные данные</span>
+                        <div class="inputs-passport">
+                            <input type="text" id="input-passportSeries" minlength="5" maxlength="5" placeholder="Серия" required>
+                            <input type="text" id="input-passportNumber" minlength="6" maxlength="6" placeholder="Номер" required>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label for="input-whoTake">
+                        <span>Кем выдан</span>
+                        <input type="text" id="input-whoTake" placeholder="Кем выдан" required>
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label for="input-whenTake">
+                        <span>Когда выдан</span>
+                        <input type="text" id="input-whenTake" placeholder="Когда выдан" required>
+                    </label>
+                </div>
+
+                <div class="row row-buttons">
+                    <button class="submit-btn" id="submit-btn" type="submit" aria-label="Отправить">Отправить</button>
+                    <button class="cancel-btn" type="reset" aria-label="Отменить">Отменить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
